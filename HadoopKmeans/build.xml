@@ -22,7 +22,7 @@
 <target name="jar" depends="compile">
 	<jar destfile="${buildDir}/hadoopkmeans.jar" basedir="${outputDir}">
 		<manifest>
-			<attribute name="Main-Class" value="cgl.mr.hadoop.kmeans.IterativeMapReduce"/>
+			<attribute name="Main-Class" value="cgl.mr.hadoop.kmeans.KmeansMain"/>
 		</manifest>
 	</jar>
 </target>
