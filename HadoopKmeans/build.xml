@@ -3,7 +3,7 @@
 	<property name="sourceDir" value="."/>
 	<property name="outputDir" value="classes"/>
 	<property name="buildDir" value="jar"/>
-	<property name="lib.dir" value="/Users/Ethan/Worksplace/hadoop-2.6.0"/>
+	<property name="lib.dir" value="PATH-TO-YOUR-HADOOP-HOME"/>
 	<path id="classpath">
 		<fileset dir="${lib.dir}" includes="**/*.jar"/>
 	</path>
