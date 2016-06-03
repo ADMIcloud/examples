@@ -88,7 +88,7 @@ public class KmeansMain  extends Configured implements Tool {
 	}
 	public int run(String[] args) throws Exception {
 		if (args.length != 5) {
-			System.err.println("Usage: IterativeMapReduce <num Of Data Points> <size of a vector> <num of Centroids> <number of map tasks> <number of iteration>");			
+			System.err.println("Usage: KmeansMain <num Of Data Points> <size of a vector> <num of Centroids> <number of map tasks> <number of iteration>");			
 			ToolRunner.printGenericCommandUsage(System.err);
 			return -1;
 		}
