@@ -1,4 +1,4 @@
-package admicloud.mapreduce.wordcount;
+package admicloud.hadoop.wordcount;
 
 import java.io.IOException;
 import java.util.StringTokenizer;
