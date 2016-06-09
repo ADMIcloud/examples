@@ -1,4 +1,4 @@
-package admicloud.kmeans.utils;
+package admicloud.hadoop.kmeans.utils;
 
 public class KmeansConstants {
 	public final static String NUM_OF_CENTROIDS = "num_of_centroids";

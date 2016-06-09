@@ -1,4 +1,4 @@
-package admicloud.kmeans.utils;
+package admicloud.hadoop.kmeans.utils;
 
 import java.io.BufferedWriter;
 import java.io.File;

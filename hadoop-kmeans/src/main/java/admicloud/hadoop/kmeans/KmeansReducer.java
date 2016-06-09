@@ -1,9 +1,11 @@
-package admicloud.kmeans.mapreduce;
+package admicloud.hadoop.kmeans;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
+import admicloud.hadoop.kmeans.utils.CentroidCountWritable;
+import admicloud.hadoop.kmeans.utils.KmeansConstants;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -11,8 +13,6 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.mapreduce.Reducer;
 
-import admicloud.kmeans.utils.CentroidCountWritable;
-import admicloud.kmeans.utils.KmeansConstants;
 
 public class KmeansReducer extends Reducer<IntWritable, CentroidCountWritable, Writable, Writable> {
 	double newCentroids[][];

@@ -1,9 +1,12 @@
-package admicloud.kmeans.mapreduce;
+package admicloud.hadoop.kmeans;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import admicloud.hadoop.kmeans.utils.CentroidCountWritable;
+import admicloud.hadoop.kmeans.utils.KmeansConstants;
+import admicloud.hadoop.kmeans.utils.Utils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -12,11 +15,6 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Mapper.Context;
-
-import admicloud.kmeans.utils.CentroidCountWritable;
-import admicloud.kmeans.utils.KmeansConstants;
-import admicloud.kmeans.utils.Utils;
-
 
 public class KmeansMapper extends Mapper<LongWritable, Text, IntWritable, CentroidCountWritable> {
 	int VECTOR_SIZE;

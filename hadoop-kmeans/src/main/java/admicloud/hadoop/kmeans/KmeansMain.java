@@ -1,8 +1,12 @@
-package admicloud.kmeans.mapreduce;
+package admicloud.hadoop.kmeans;
 
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+
+import admicloud.hadoop.kmeans.utils.CentroidCountWritable;
+import admicloud.hadoop.kmeans.utils.KmeansConstants;
+import admicloud.hadoop.kmeans.utils.Utils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.FileSystem;
@@ -15,10 +19,6 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
-
-import admicloud.kmeans.utils.CentroidCountWritable;
-import admicloud.kmeans.utils.KmeansConstants;
-import admicloud.kmeans.utils.Utils;
 
 public class KmeansMain  extends Configured implements Tool {
 	public void launch(int numDataPoints, int vectorSize, int numCentroids, int numMapTasks, int numIteration)
