@@ -14,12 +14,16 @@ import org.apache.storm.tuple.Fields;
 import org.apache.storm.tuple.Tuple;
 import org.apache.storm.tuple.Values;
 import org.apache.storm.utils.Utils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
 public class WordCountTopology {
+  private static Logger LOG = LoggerFactory.getLogger(WordCountTopology.class);
+
   public static class RandomSentenceSpout extends BaseRichSpout {
     SpoutOutputCollector _collector;
     Random _rand;
@@ -84,7 +88,7 @@ public class WordCountTopology {
         count = 0;
       count++;
       counts.put(word, count);
-      System.out.format("Count of word: %s = %d\n", word, count);
+      LOG.info("Count of word: " + word + " = " + count);
       collector.emit(new Values(word, count));
     }
 
